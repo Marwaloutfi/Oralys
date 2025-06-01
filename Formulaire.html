@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Formulaire d'Admission – Académie d’Éloquence 2030</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #e3f9e5, #f0f0f0);
+      color: #222;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 60px auto;
+      background: #fff;
+      padding: 40px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      border-radius: 15px;
+    }
+
+    h1, h2 {
+      text-align: center;
+      color: #03a00b;
+    }
+
+    label {
+      display: block;
+      margin-top: 20px;
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="date"],
+    input[type="tel"],
+    textarea,
+    select {
+      width: 100%;
+      padding: 12px;
+      margin-top: 8px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 15px;
+    }
+
+    textarea {
+      resize: vertical;
+      height: 100px;
+    }
+
+    .checkbox-group,
+    .radio-group {
+      margin-top: 10px;
+    }
+
+    .checkbox-group label,
+    .radio-group label {
+      display: inline-block;
+      margin-right: 20px;
+      font-weight: normal;
+    }
+
+    .submit-button {
+      margin-top: 30px;
+      background-color: #03a00b;
+      color: #fff;
+      border: none;
+      padding: 15px 25px;
+      font-size: 16px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .submit-button:hover {
+      background-color: #11c648;
+    }
+
+    .signature {
+      margin-top: 30px;
+    }
+
+    .footer-note {
+      margin-top: 40px;
+      text-align: center;
+      font-style: italic;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Académie d’Éloquence – 2030</h1>
+    <h2>Formulaire Officiel d’Admission</h2>
+
+    <form action="#" method="post">
+
+      <label>Nom complet :</label>
+      <input type="text" name="fullname" required>
+
+      <label>Date de naissance :</label>
+      <input type="date" name="dob" required>
+
+      <label>Nationalité :</label>
+      <input type="text" name="nationality" required>
+
+      <label>Adresse e-mail holographique :</label>
+      <input type="email" name="email" required>
+
+      <label>Téléphone (NeuroCall) :</label>
+      <input type="tel" name="phone" required>
+
+      <label>Avez-vous déjà participé à des concours d’éloquence ?</label>
+      <div class="radio-group">
+        <label><input type="radio" name="experience" value="oui"> Oui</label>
+        <label><input type="radio" name="experience" value="non"> Non</label>
+      </div>
+
+      <label>Si oui, précisez :</label>
+      <textarea name="details"></textarea>
+
+      <label>Qu’est-ce que l’éloquence représente pour vous ?</label>
+      <input type="text" name="definition" required>
+
+      <label>Langues parlées :</label>
+      <div class="checkbox-group">
+        <label><input type="checkbox" name="langues" value="français"> Français</label>
+        <label><input type="checkbox" name="langues" value="anglais"> Anglais</label>
+        <label><input type="checkbox" name="langues" value="espagnol"> Espagnol</label>
+        <label><input type="checkbox" name="langues" value="arabe"> Arabe</label>
+        <label><input type="checkbox" name="langues" value="autres"> Autres</label>
+      </div>
+
+      <label>Décrivez un moment où vos mots ont eu un impact :</label>
+      <textarea name="impact" required></textarea>
+
+      <label>Votre style dominant :</label>
+      <select name="style">
+        <option value="visionnaire">Visionnaire</option>
+        <option value="poétique">Poétique</option>
+        <option value="rhétorique">Rhétorique</option>
+        <option value="juridique">Juridique</option>
+        <option value="slam">Slam</option>
+      </select>
+
+      <label>Section souhaitée :</label>
+      <select name="section">
+        <option value="politique">Oratoire politique</option>
+        <option value="theatre">Théâtre & improvisation</option>
+        <option value="leadership">Coaching & leadership</option>
+        <option value="podcast">Podcast & communication digitale</option>
+        <option value="intergalactique">Débat intergalactique</option>
+      </select>
+
+      <label>Vidéo de motivation (lien ou nom du fichier) :</label>
+      <input type="text" name="video">
+
+      <div class="signature">
+        <label>Signature numérique :</label>
+        <input type="text" name="signature" required>
+
+        <label>Date :</label>
+        <input type="date" name="date" required>
+      </div>
+
+      <button type="submit" class="submit-button">Soumettre la Candidature</button>
+
+      <div class="footer-note">
+        Une audition immersive vous sera proposée après sélection. Préparez vos mots pour changer le monde.
+      </div>
+
+    </form>
+  </div>
+
+</body>
+</html>
+
