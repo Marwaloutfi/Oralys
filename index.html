@@ -231,6 +231,72 @@
 .slider button:hover {
   background-color: #148e2e;
 }
+    .navbar {
+  background-color: #ffffff;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  top: 0;
+  z-index: 1000;
+  position: sticky;
+}
+
+.navbar ul {
+  list-style-type: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar li {
+  margin: 0 15px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: rgb(3, 170, 11);
+  font-weight: bold;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+  color: #11c648;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Phone view adjustments */
+@media (max-width: 768px) {
+  .navbar ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #ffffff;
+    position: absolute;
+    top: 60px;
+    left: 0;
+  }
+
+  .navbar ul.active {
+    display: flex;
+  }
+
+  .navbar li {
+    margin: 15px 0;
+    text-align: center;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+
 
   </style>
   <script>
@@ -262,7 +328,11 @@
     <li><a href="file:///C:/Users/hp/Desktop/Oralys/h.html">Rejoindre l'académie</a></li>
   </ul>
 </nav>
-
+<script>
+  function toggleMenu() {
+    document.getElementById('navbar-menu').classList.toggle('active');
+  }
+</script>
   <!-- Logos -->
   <img class="logoemsi" src="EMSI COPIE.png" alt="Logo EMSI">
   <img class="logooralys" src="LOGO COPIE.png" alt="Logo Oralys">
