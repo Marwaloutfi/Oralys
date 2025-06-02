@@ -299,23 +299,7 @@
 
 
   </style>
-  <script>
-  const track = document.querySelector('.slider-track');
-  const slides = document.querySelectorAll('.slider');
-  let index = 0;
-
-  function slideNext() {
-    index++;
-    if (index >= slides.length) {
-      index = 0;
-    }
-    const slideWidth = slides[0].offsetWidth + 30; // width + gap
-    track.style.transform = `translateX(-${slideWidth * index}px)`;
-  }
-
-  setInterval(slideNext, 3000); // Slide every 3 seconds
-</script>
-
+ 
 </head>
 
 <body>
@@ -382,6 +366,22 @@
   
   </div>
   
+ <script>
+  const track = document.querySelector('.slider-track');
+  const slides = document.querySelectorAll('.slider');
+  let index = 0;
+
+  function slideNext() {
+    index++;
+    if (index >= slides.length) {
+      index = 0;
+    }
+    const slideWidth = slides[0].offsetWidth + 30; // width + gap
+    track.style.transform = `translateX(-${slideWidth * index}px)`;
+  }
+
+  setInterval(slideNext, 3000); // Slide every 3 seconds
+</script>
 
   <!-- Description -->
   <div>
