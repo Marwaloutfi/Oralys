@@ -177,7 +177,7 @@
     .contact-info a:hover {
       text-decoration: underline;
     }
-   /* Default: multiple items in a row */
+ /* Default layout for larger screens */
 .slider-container {
   display: flex;
   gap: 30px;
@@ -188,24 +188,23 @@
   padding: 20px;
 }
 
-/* ✅ Horizontal scroll on small screens */
+/* ✅ Mobile version with centered, scrollable sliders */
 @media screen and (max-width: 600px) {
   .slider-container {
-    flex-wrap: nowrap;          /* Don't wrap on small screens */
-    overflow-x: auto;           /* Enable horizontal scroll */
-    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
-    gap: 20px;
+    flex-wrap: nowrap;                    /* No wrapping */
+    overflow-x: auto;                     /* Enable horizontal scrolling */
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;        /* Snap scrolling */
+    gap: 0;                               /* Remove gap to prevent partial views */
     padding: 10px;
+    justify-content: start;              /* Start from the first slider */
   }
 
   .slider {
-    flex: 0 0 auto;            /* Prevent shrinking and keep fixed width */
-    width: 80%;                /* Adjust for better view on small screens */
-    scroll-snap-align: start; /* Optional: helps snapping while scrolling */
-  }
-
-  .slider-container::-webkit-scrollbar {
-    display: none;             /* Optional: hide scrollbar for cleaner look */
+    flex: 0 0 100%;                       /* Take full screen width */
+    scroll-snap-align: center;           /* Center each card on scroll */
+    width: 100%;                         /* Ensure full width */
+    margin: 0 auto;                      /* Center in container */
   }
 
   .slider img {
@@ -216,7 +215,12 @@
     width: 100%;
     font-size: 16px;
   }
+
+  .slider-container::-webkit-scrollbar {
+    display: none; /* Optional: hide scrollbar */
+  }
 }
+
 
   .navbar {
   background-color: #ffffff;
